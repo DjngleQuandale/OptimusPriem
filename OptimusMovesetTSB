@@ -1,0 +1,703 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Optimus By Youje Or SGTA", -- title 
+	Text = "No Skids", -- here to write 
+	Icon = "rbxassetid://12657664114" -- image id (no needed)
+})
+
+task.wait(3) -- your time
+
+-- Optimus Prime Text Display Script
+-- By Youje Or SGTA
+
+-- Create the Screen GUI
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "OptimusPrimeGui"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create the Text Label
+local textLabel = Instance.new("TextLabel")
+textLabel.Parent = screenGui
+textLabel.Size = UDim2.new(1, 0, 0.1, 0) -- Full width, 10% height
+textLabel.Position = UDim2.new(0, 0, 0, 0) -- Top of the screen
+textLabel.BackgroundTransparency = 1 -- Make the background transparent
+textLabel.Text = "OPTIMUS BY YOUJE/SGTA"
+textLabel.Font = Enum.Font.SourceSansBold -- Set font style
+textLabel.TextSize = 10
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- White color
+textLabel.TextStrokeTransparency = 0 -- Add a black outline for readability
+textLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) -- Black stroke
+
+-- Ensure the GUI is always visible
+screenGui.ResetOnSpawn = false
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local leftArm = character:FindFirstChild("Left Arm") or character:WaitForChild("Left Arm")
+
+
+local part = Instance.new("Part")
+part.Size = Vector3.new(1, 1, 1) 
+part.Position = leftArm.Position 
+part.Anchored = false 
+part.CanCollide = false 
+part.Parent = character 
+
+
+local mesh = Instance.new("SpecialMesh")
+mesh.MeshId = "rbxassetid://14548779444" 
+mesh.TextureId = "rbxassetid://14566735733" 
+mesh.Parent = part 
+
+local weld = Instance.new("Weld")
+weld.Part0 = leftArm 
+weld.Part1 = part
+weld.C0 = CFrame.new(-0.6, 0.9, 0)
+weld.Parent = leftArm 
+
+
+part.CFrame = leftArm.CFrame * CFrame.new(1, 1, 1)
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local rightArm = character:FindFirstChild("Right Arm") or character:WaitForChild("Right Arm")
+
+
+local part = Instance.new("Part")
+part.Size = Vector3.new(1, 1, 1) 
+part.Position = rightArm.Position 
+part.Anchored = false 
+part.CanCollide = false 
+part.Parent = character 
+
+
+local mesh = Instance.new("SpecialMesh")
+mesh.MeshId = "rbxassetid://14548779521" 
+mesh.TextureId = "rbxassetid://14566735733" 
+mesh.Parent = part 
+
+local weld = Instance.new("Weld")
+weld.Part0 = rightArm 
+weld.Part1 = part
+weld.C0 = CFrame.new(0.6, 0.9, 0)
+weld.Parent = rightArm 
+
+
+part.CFrame = rightArm.CFrame * CFrame.new(1, 1, 1)
+local function attachPartToPlayer(player)
+    
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    
+    local torso = character:FindFirstChild("Torso") or character:FindFirstChild("UpperTorso")
+    if not torso then
+        warn("Torso not found!")
+        return
+    end
+
+  
+    local newPart = Instance.new("Part")
+    newPart.Size = Vector3.new(2, 2, 2) 
+    newPart.Color = Color3.new(1, 1, 1)
+    newPart.Anchored = false
+    newPart.CanCollide = false
+    newPart.Massless = true
+    newPart.Parent = character
+
+ 
+    local specialMesh = Instance.new("SpecialMesh")
+    specialMesh.MeshId = "rbxassetid://17454042970" 
+    specialMesh.TextureId = "rbxassetid://17454048929"
+    specialMesh.Scale = Vector3.new(0.0012, 0.0012, 0.0012) 
+    specialMesh.Parent = newPart
+
+  
+    local weld = Instance.new("Weld")
+    weld.Part0 = torso
+    weld.Part1 = newPart
+    weld.C0 = CFrame.new(0, 0.1, 0) 
+    weld.Parent = newPart
+end
+
+
+local player = game.Players.LocalPlayer
+if player then
+    attachPartToPlayer(player)
+end
+
+local function attachPartToPlayer(player)
+    
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    
+    local torso = character:FindFirstChild("Torso") or character:FindFirstChild("UpperTorso")
+    if not torso then
+        warn("Torso not found!")
+        return
+    end
+
+  
+    local newPart = Instance.new("Part")
+    newPart.Size = Vector3.new(2, 2, 2) 
+    newPart.Color = Color3.new(1, 1, 1)
+    newPart.Anchored = false
+    newPart.CanCollide = false
+    newPart.Massless = true
+    newPart.Parent = character
+
+ 
+    local specialMesh = Instance.new("SpecialMesh")
+    specialMesh.MeshId = "rbxassetid://17454909520" 
+    specialMesh.TextureId = "rbxassetid://17454263229"
+    specialMesh.Scale = Vector3.new(0.0015, 0.0010, 0.0013) 
+    specialMesh.Parent = newPart
+
+  
+    local weld = Instance.new("Weld")
+    weld.Part0 = torso
+    weld.Part1 = newPart
+    weld.C0 = CFrame.new(0, -1, 0.1) 
+    weld.Parent = newPart
+end
+
+
+local player = game.Players.LocalPlayer
+if player then
+    attachPartToPlayer(player)
+end
+
+local function attachPartToPlayer(player)
+    
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    
+    local torso = character:FindFirstChild("Torso") or character:FindFirstChild("UpperTorso")
+    if not torso then
+        warn("Torso not found!")
+        return
+    end
+
+  
+    local newPart = Instance.new("Part")
+    newPart.Size = Vector3.new(2, 2, 2) 
+    newPart.Color = Color3.new(1, 1, 1)
+    newPart.Anchored = false
+    newPart.Massless = true
+    newPart.CanCollide = false
+    newPart.Parent = character
+
+ 
+    local specialMesh = Instance.new("SpecialMesh")
+    specialMesh.MeshId = "rbxassetid://17454060420" 
+    specialMesh.TextureId = "rbxassetid://17454069092"
+    specialMesh.Scale = Vector3.new(0.0012, 0.0012, 0.0012) 
+    specialMesh.Parent = newPart
+
+  
+    local weld = Instance.new("Weld")
+    weld.Part0 = torso
+    weld.Part1 = newPart
+    weld.C0 = CFrame.new(0, 0.5, -0.8) 
+    weld.Parent = newPart
+end
+
+
+local player = game.Players.LocalPlayer
+if player then
+    attachPartToPlayer(player)
+end
+local function attachPartToPlayer(player)
+    
+    local character = player.Character or player.CharacterAdded:Wait()
+
+    
+    local torso = character:FindFirstChild("Torso") or character:FindFirstChild("UpperTorso")
+    if not torso then
+        warn("Torso not found!")
+        return
+    end
+
+  
+    local newPart = Instance.new("Part")
+    newPart.Size = Vector3.new(2, 2, 2) 
+    newPart.Color = Color3.new(1, 1, 1)
+    newPart.Anchored = false
+    newPart.Massless = true
+    newPart.CanCollide = false
+    newPart.Parent = character
+
+ 
+    local specialMesh = Instance.new("SpecialMesh")
+    specialMesh.MeshId = "rbxassetid://14032332188" 
+    specialMesh.TextureId = "rbxassetid://14032974691"
+    specialMesh.Scale = Vector3.new(1, 1, 1) 
+    specialMesh.Parent = newPart
+
+  
+    local weld = Instance.new("Weld")
+    weld.Part0 = torso
+    weld.Part1 = newPart
+    weld.C0 = CFrame.new(0, 0, 0.7) 
+    weld.Parent = newPart
+end
+
+
+local player = game.Players.LocalPlayer
+if player then
+    attachPartToPlayer(player)
+end
+local Players = game:GetService("Players")
+
+
+local MESH_ID = "rbxassetid://14032881123"
+local TEXTURE_ID = "rbxassetid://14032852352" 
+
+
+local function attachPartToHead(player)
+    local character = player.Character or player.CharacterAdded:Wait()
+    local head = character:FindFirstChild("Head")
+    if not head then
+        warn("No head found for the character!")
+        return
+    end
+
+  
+    local part = Instance.new("Part")
+    part.Name = "CustomHeadAccessory"
+    part.Size = Vector3.new(1, 1, 1)
+    part.Anchored = false
+    part.CanCollide = false
+     part.Massless = true
+    part.Parent = character
+
+
+    local mesh = Instance.new("SpecialMesh", part)
+    mesh.MeshId = "rbxassetid://14032881123"
+    mesh.TextureId = "rbxassetid://14032852352"
+    mesh.Scale = Vector3.new(0.7, 0.7, 0.7) 
+
+  
+    local weld = Instance.new("Weld")
+    weld.Part0 = head
+    weld.Part1 = part
+    weld.C0 = CFrame.new(0, 0.4, 0.1)
+    weld.Parent = head
+
+   
+    part.CFrame = head.CFrame * weld.C0
+end
+
+
+local player = Players.LocalPlayer
+if player then
+    player.CharacterAdded:Connect(function()
+        attachPartToHead(player)
+    end)
+
+    if player.Character then
+        attachPartToHead(player)
+    end
+end
+local Players = game:GetService("Players")
+
+
+local MESH_ID = "rbxassetid://14032875115"
+local TEXTURE_ID = "rbxassetid://14032852706" 
+
+
+local function attachPartToHead(player)
+    local character = player.Character or player.CharacterAdded:Wait()
+    local head = character:FindFirstChild("Head")
+    if not head then
+        warn("No head found for the character!")
+        return
+    end
+
+  
+    local part = Instance.new("Part")
+    part.Name = "CustomHeadAccessory"
+    part.Size = Vector3.new(1, 1, 1)
+    part.Anchored = false
+    part.CanCollide = false
+     part.Massless = true
+    part.Parent = character
+
+
+    local mesh = Instance.new("SpecialMesh", part)
+    mesh.MeshId = "rbxassetid://14032875115"
+    mesh.TextureId = "rbxassetid://14032852706"
+    mesh.Scale = Vector3.new(0.7, 0.7, 0.7) 
+
+  
+    local weld = Instance.new("Weld")
+    weld.Part0 = head
+    weld.Part1 = part
+    weld.C0 = CFrame.new(0, -0.2, -0.3)
+    weld.Parent = head
+
+   
+    part.CFrame = head.CFrame * weld.C0
+end
+
+
+local player = Players.LocalPlayer
+if player then
+    player.CharacterAdded:Connect(function()
+        attachPartToHead(player)
+    end)
+
+    if player.Character then
+        attachPartToHead(player)
+    end
+end
+local Players = game:GetService("Players")
+
+
+local MESH_ID = "rbxassetid://14032723039"
+local TEXTURE_ID = "rbxassetid://14032799769" 
+
+
+local function attachPartToHead(player)
+    local character = player.Character or player.CharacterAdded:Wait()
+    local head = character:FindFirstChild("Head")
+    if not head then
+        warn("No head found for the character!")
+        return
+    end
+
+  
+    local part = Instance.new("Part")
+    part.Name = "CustomHeadAccessory"
+    part.Size = Vector3.new(1, 1, 1)
+    part.Anchored = false
+    part.CanCollide = false
+     part.Massless = true
+    part.Parent = character
+
+
+    local mesh = Instance.new("SpecialMesh", part)
+    mesh.MeshId = "rbxassetid://14032723039"
+    mesh.TextureId = "rbxassetid://14032799769"
+    mesh.Scale = Vector3.new(0.7, 0.7, 0.7) 
+
+  
+    local weld = Instance.new("Weld")
+    weld.Part0 = head
+    weld.Part1 = part
+    weld.C0 = CFrame.new(0, 0.1, 0.1)
+    weld.Parent = head
+
+   
+    part.CFrame = head.CFrame * weld.C0
+end
+
+
+local player = Players.LocalPlayer
+if player then
+    player.CharacterAdded:Connect(function()
+        attachPartToHead(player)
+    end)
+
+    if player.Character then
+        attachPartToHead(player)
+    end
+end
+local Players = game:GetService("Players")
+
+
+local MESH_ID = "rbxassetid://14032886201"
+local TEXTURE_ID = "rbxassetid://14032852119" 
+
+
+local function attachPartToHead(player)
+    local character = player.Character or player.CharacterAdded:Wait()
+    local head = character:FindFirstChild("Head")
+    if not head then
+        warn("No head found for the character!")
+        return
+    end
+
+  
+    local part = Instance.new("Part")
+    part.Name = "CustomHeadAccessory"
+    part.Size = Vector3.new(1, 1, 1)
+    part.Anchored = false
+    part.CanCollide = false
+     part.Massless = true
+    part.Parent = character
+
+
+    local mesh = Instance.new("SpecialMesh", part)
+    mesh.MeshId = "rbxassetid://14032886201"
+    mesh.TextureId = "rbxassetid://14032852119"
+    mesh.Scale = Vector3.new(0.7, 0.7, 0.7) 
+
+  
+    local weld = Instance.new("Weld")
+    weld.Part0 = head
+    weld.Part1 = part
+    weld.C0 = CFrame.new(0, 0.3, 0.2)
+    weld.Parent = head
+
+   
+    part.CFrame = head.CFrame * weld.C0
+end
+
+
+local player = Players.LocalPlayer
+if player then
+    player.CharacterAdded:Connect(function()
+        attachPartToHead(player)
+    end)
+
+    if player.Character then
+        attachPartToHead(player)
+    end
+end
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local rightArm = character:FindFirstChild("Right Arm") or character:WaitForChild("Right Arm")
+
+
+local part = Instance.new("Part")
+part.Size = Vector3.new(1, 1, 1) 
+part.Position = rightArm.Position 
+part.Anchored = false 
+part.CanCollide = false 
+part.Massless = true
+part.Parent = character 
+
+
+local mesh = Instance.new("SpecialMesh")
+mesh.MeshId = "rbxassetid://14802059507" 
+mesh.TextureId = "rbxassetid://14827731803" 
+mesh.Parent = part 
+
+local weld = Instance.new("Weld")
+weld.Part0 = rightArm 
+weld.Part1 = part
+weld.C0 = CFrame.new(0, -0.7, -2)
+weld.Parent = rightArm 
+
+
+part.CFrame = rightArm.CFrame * CFrame.new(1, 1, 1)
+local Shirt = true
+local Pants = true
+local ShirtId = 14030973916
+local PantsId = 18600106191
+
+
+if Shirt then
+for _, d in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if d:IsA("Shirt") then
+d.ShirtTemplate = "rbxassetid://" .. ShirtId
+end
+end
+elseif Pants then
+for _, d in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if d:IsA("Pants") then
+d.PantsTemplate = "rbxassetid://" .. PantsId
+end
+end
+end
+
+local Pants = true
+local PantsId = 11722911469
+
+
+if Pants then
+for _, d in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if d:IsA("Pants") then
+d.PantsTemplate = "rbxassetid://" .. PantsId
+end
+end
+end
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local leftArm = character:FindFirstChild("Left Arm") or character:WaitForChild("Left Arm")
+
+
+local part = Instance.new("Part")
+part.Size = Vector3.new(1, 1, 1) 
+part.Position = leftArm.Position 
+part.Anchored = false 
+part.CanCollide = false
+part.Massless = true
+part.Parent = character 
+
+
+local mesh = Instance.new("SpecialMesh")
+mesh.MeshId = "rbxassetid://100749405018793" 
+mesh.TextureId = "rbxassetid://115087130521979"
+mesh.Parent = part 
+
+local weld = Instance.new("Weld")
+weld.Part0 = leftArm 
+weld.Part1 = part
+weld.C0 = CFrame.new(0, -1.5, -0.8)
+weld.Parent = leftArm 
+part.CFrame = leftArm.CFrame * CFrame.new(1, 1, 1)
+
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local playerGui = player:WaitForChild("PlayerGui")
+local hotbar = playerGui:FindFirstChild("Hotbar")
+local backpack = hotbar:FindFirstChild("Backpack")
+local hotbarFrame = backpack:FindFirstChild("Hotbar")
+
+local buttonData = {
+    {name = "1", text = "Star Saber Cleave"},
+    {name = "2", text = "Headfirst Slam"},
+    {name = "3", text = "Ion Blaster"},
+    {name = "4", text = "Saber Counter"},
+}
+
+for _, data in pairs(buttonData) do
+    local baseButton = hotbarFrame:FindFirstChild(data.name).Base
+    local ToolName = baseButton.ToolName
+    ToolName.Text = data.text
+end
+
+local function waitForGui()
+    while true do
+        local screenGui = playerGui:FindFirstChild("ScreenGui")
+        if screenGui then
+            local magicHealthFrame = screenGui:FindFirstChild("MagicHealth")
+            if magicHealthFrame then
+                local textLabel = magicHealthFrame:FindFirstChild("TextLabel")
+                if textLabel then
+                    textLabel.Text = "THE LAST PRIME"
+                end
+              
+                local healthBar = magicHealthFrame:FindFirstChild("Health").Bar.Bar
+                if healthBar then
+                    healthBar.ImageColor3 = Color3.fromRGB(0,  255, 255)
+                end
+                
+                return
+            end
+        end
+        wait(1)
+    end
+end
+waitForGui()
+
+local replacementAnimations = {
+    ["13532562418"] = "rbxassetid://15259161390",
+    ["13532600125"] = "rbxassetid://15240216931",
+    ["13532604085"] = "rbxassetid://15240176873",
+    ["13294471966"] = "rbxassetid://13146710762",
+    ["12273188754"] = "rbxassetid://15290930205",
+    ["12296113986"] = "rbxassetid://13813099821",
+    ["12309835105"] = "rbxassetid://13146710762",
+    ["13603396939"] = "rbxassetid://15334974550",
+    ["12342141464"] = "rbxassetid://15520132233",
+    ["15520132233"] = "rbxassetid://18716698376",
+    ["12467789963"] = "rbxassetid://18716655757",
+    ["14057231976"] = "rbxassetid://18715842262",
+}
+
+local function applyVFX(animationId)
+    local vfxAttachment
+    if animationId == "15259161390" then
+        vfxAttachment = game.ReplicatedStorage.Resources["AtomicSlash"].AtomicSlash.Part.Attachment
+if vfxAttachment then
+        local vfxClone = vfxAttachment:Clone()
+        vfxClone.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+        for _, child in ipairs(vfxClone:GetChildren()) do
+            if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+                child:Emit(15)
+                child.Enabled = true
+            end
+        end
+        wait(1)
+        vfxClone:Destroy()
+end
+    elseif animationId == "15240216931" then
+        vfxAttachment = game.ReplicatedStorage.Resources["AtomicSlash"].AtomicSlash.Part.Attachment
+if vfxAttachment then
+        local vfxClone = vfxAttachment:Clone()
+        vfxClone.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+        for _, child in ipairs(vfxClone:GetChildren()) do
+            if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+                child:Emit(15)
+                child.Enabled = true
+            end
+        end
+        wait(1)
+        vfxClone:Destroy()
+end
+    elseif animationId == "15240176873" then
+        vfxAttachment = game.ReplicatedStorage.Resources["AtomicSlash"].AtomicSlash.Part.Attachment
+if vfxAttachment then
+        local vfxClone = vfxAttachment:Clone()
+        vfxClone.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+        for _, child in ipairs(vfxClone:GetChildren()) do
+            if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+                child:Emit(15)
+                child.Enabled = true
+            end
+        end
+        wait(1)
+        vfxClone:Destroy()
+end
+    elseif animationId == "13146710762" then
+        vfxAttachment = game.ReplicatedStorage.Resources["SkyRuler"].ThrowDown.Part.Attachment
+
+if vfxAttachment then
+        local vfxClone = vfxAttachment:Clone()
+        vfxClone.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+vfxClone.CFrame = CFrame.Angles(0, math.rad(45), 0)
+        for _, child in ipairs(vfxClone:GetChildren()) do
+            if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.new(100, 64.7, 0))
+                child:Emit(15)
+                child.Enabled = true
+            end
+        end
+        wait(1)
+        vfxClone:Destroy()
+end
+    elseif animationId == "15290930205" then
+        vfxAttachment = game.ReplicatedStorage.Resources["Robot Ultimate"].Start
+if vfxAttachment then
+        local vfxClone = vfxAttachment:Clone()
+        vfxClone.Parent = game.Players.LocalPlayer.Character["Torso"]
+        for _, child in ipairs(vfxClone:GetChildren()) do
+            if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+                child:Emit(15)
+                child.Enabled = true
+            end
+        end
+        wait(1)
+        vfxClone:Destroy()
+end
+    elseif animationId == "13146710762" then
+        vfxAttachment = game.ReplicatedStorage.Resources["SkyRuler"].ThrowDown.Part.Attachment
+if vfxAttachment then
+        local vfxClone = vfxAttachment:Clone()
+        vfxClone.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+vfxClone.CFrame = CFrame.Angles(0, math.rad(45), 0)
+        for _, child in ipairs(vfxClone:GetChildren()) do
+            if child:IsA("ParticleEmitter") then
+child.Color = ColorSequence.new(Color3.new(0, 255, 255))
+                child:Emit(15)
+                child.Enabled = true
+            end
+        end
+        wait(2)
+        vfxClone:Destroy()
+end
+elseif animationId == "13146710762" then
+        vfxAttachment = game.ReplicatedStorage.Resources["CyborgArms"].Outer.Attachment
+elseif animationId == "15962326593" then
+        vfxAttachment = game.ReplicatedStorage.Resources["CyborgArms"].Outer.Attachment      
+elseif animationId == "16598695404" then
+        vfxAttachment = game.Replica
