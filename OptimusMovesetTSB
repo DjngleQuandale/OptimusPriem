@@ -21,4 +21,3 @@ textLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0) -- Black stroke
 
 -- Ensure the GUI is always visible
 screenGui.ResetOnSpawn = false
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DjngleQuandale/OptimusPrimeTsb/refs/heads/main/Optimusmoveset"))()
